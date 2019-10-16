@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:background="@android:color/holo_blue_bright"
+                android:textSize="42sp"
+                android:textColor="@android:color/white"
+                android:paddingTop="30dp"
+                android:paddingLeft="30dp"
+                android:id="@+id/movieName"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:id="@+id/posterImg"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_marginLeft="20dp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:id="@+id/movieReleaseDate"
+                    android:layout_marginTop="80dp"
+                    android:text="ghjbzn"
+                    android:layout_marginLeft="30dp"></TextView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:background="@android:color/darker_gray"
+                        android:id="@+id/movieRate"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"></TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:id="@+id/movieDescripation"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"></TextView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
