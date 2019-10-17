@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements Movies_RV_Adapter
         } else
         {
             Toast.makeText(MainActivity.this, "Network Not Available", Toast.LENGTH_LONG).show();
+            mLoadingIndicator.setVisibility(View.INVISIBLE);
         }
         
     }
