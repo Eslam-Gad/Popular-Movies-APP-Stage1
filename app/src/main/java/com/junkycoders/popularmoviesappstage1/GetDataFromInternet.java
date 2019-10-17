@@ -13,10 +13,10 @@ public class GetDataFromInternet {
 
         if(sortingType.equals("popular")){
             base_URL =
-                   "http://api.themoviedb.org/3/movie/popular?api_key=[your_API_Key]";
+                   "http://api.themoviedb.org/3/movie/popular?api_key=37789dc48bb9195cdca528bdbc31ce85";
         }else{
             base_URL =
-                    "http://api.themoviedb.org/3/movie/top_rated?api_key=[your_API_Key]";
+                    "http://api.themoviedb.org/3/movie/top_rated?api_key=37789dc48bb9195cdca528bdbc31ce85";
         }
         String JSONData = "";
 
