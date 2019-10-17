@@ -21,8 +21,19 @@ public class MainActivity extends AppCompatActivity implements Movies_RV_Adapter
         mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_loading_indicator);
         moviesList = (RecyclerView)findViewById(R.id.MoviesList);
 
-        /* pass string paramter to specify API query */
-        new FetchMovieTask("popular").execute();
+         /*Check internet connection*/
+        ConnectivityManager ConnectionManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo=ConnectionManager.getActiveNetworkInfo();
+        if(networkInfo != null && networkInfo.isConnected()==true ) {
+
+            /* pass string paramter to specify API query */
+            new FetchMovieTask("popular").execute();
+
+        } else
+        {
+            Toast.makeText(MainActivity.this, "Network Not Available", Toast.LENGTH_LONG).show();
+        }
+        
     }
 
 
@@ -39,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements Movies_RV_Adapter
 
             /*API query depend on popularty
             *
-            * https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=[API_Key]
             *
             * */
 
@@ -49,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements Movies_RV_Adapter
 
             /*API query depend on Rate
              *
-             * http://api.themoviedb.org/3/discover/movie?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=[API_Key]
              *
              * */
             case R.id.sort_rate :new FetchMovieTask("rate").execute();
